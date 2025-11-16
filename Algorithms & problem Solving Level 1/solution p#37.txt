@@ -1,0 +1,31 @@
+float ReadNum(string msg)
+{
+    int num;
+    cout << msg << endl;
+    cin >> num;
+
+    return num;
+}
+int Sum()
+{
+    int sum = 0;
+    int counter = 1;
+    int num = 0;
+    do
+    { 
+        num = ReadNum("enter a number " + to_string(counter));
+        if (num == -99)
+            break;
+        
+        counter++;
+        sum += num;
+    } while (num != -99);
+
+    return sum;
+}
+
+
+int main()
+{
+    
+    cout << Sum() << endl;

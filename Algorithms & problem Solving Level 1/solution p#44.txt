@@ -1,0 +1,46 @@
+enum enDays {sunday = 1, monday = 2, tuesday = 3, wednesday = 4, thursday = 5, friday = 6, saturday = 7};
+
+int ReadDay(string msg, int from, int to)
+{
+    int day = 0;
+    do
+    {
+        cout << msg << from << " to " << to << endl;
+        cin >> day;
+    } while (day < from || day > to);
+
+    return day;
+}
+
+enDays convert()
+{
+    return (enDays) ReadDay("enter day ",1,7);
+}
+
+string PrintDay(enDays day)
+{
+    switch (day)
+    {
+    case enDays::sunday:
+        return "sunday";
+    case enDays::monday:
+        return "monday";
+    case enDays::tuesday:
+        return "tuesday";
+    case enDays::wednesday:
+        return "wednesday";
+    case enDays::thursday:
+        return "thursday";
+    case enDays::friday:
+        return "friday";
+    case enDays::saturday:
+        return "saturday";
+    default:
+        return "errooor !";
+    }
+}
+
+
+int main()
+{
+    cout << PrintDay(convert());

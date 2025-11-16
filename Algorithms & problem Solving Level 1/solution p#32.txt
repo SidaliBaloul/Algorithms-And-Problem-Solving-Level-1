@@ -1,0 +1,35 @@
+int ReadNum()
+{
+    int num;
+    cout << "enter num : " << endl;
+    cin >> num;
+
+    return num;
+}
+int Readm()
+{
+    int m;
+    cout << "enter m value : " << endl;
+    cin >> m;
+
+    return m;
+}
+
+int PrintResult(int num, int m)
+{
+    if (m == 0)
+    {
+        return 1;
+    }
+    int p = 1;
+    for (int i = 1; i <= m;i++)
+    {
+        p *= num;
+    }
+    return p;
+}
+
+
+int main()
+{
+    cout << PrintResult(Readm(), ReadNum());

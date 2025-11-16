@@ -1,0 +1,33 @@
+float ReadNumber()
+{
+    int ts;
+    cout << "enter ts value : " << endl;
+    cin >> ts;
+
+    return ts;
+}
+
+float Calculate(float ts)
+{
+    if (ts >= 1000000)
+        return 0.01;
+    else if (ts >= 500000)
+        return 0.02;
+    else if (ts >= 100000)
+        return 0.03;
+    else if (ts >= 50000)
+        return 0.05;
+    else
+        return 0;
+}
+
+float PrintResult(float result)
+{
+    return Calculate(result) * result;
+}
+
+int main()
+{
+    float ts = ReadNumber();
+    cout << "pourcentage is : " << Calculate(ts) << endl;
+    cout << PrintResult(ts);

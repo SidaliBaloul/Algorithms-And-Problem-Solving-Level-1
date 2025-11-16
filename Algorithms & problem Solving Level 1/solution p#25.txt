@@ -1,0 +1,32 @@
+int ReadNumber()
+{
+    int age;
+    cout << "enter age value : " << endl;
+    cin >> age;
+    return age;
+}
+bool Validate(int age, int from, int to)
+{
+    return (age >= from && age <= to);
+}
+int Check(int from, int to)
+{
+    int age = 0;
+    do
+    {
+        age = ReadNumber();
+
+    } while (!Validate(age, from, to));
+
+    return age;
+}
+void PrintResults(int age)
+{
+    cout << "ur age is : " << age << endl;
+
+}
+
+
+int main()
+{
+    PrintResults(Check(18,45));

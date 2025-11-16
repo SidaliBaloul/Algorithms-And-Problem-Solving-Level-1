@@ -1,0 +1,27 @@
+int ReadNumbers(int &num1, int &num2, int &num3)
+{
+    cout << "enter number 1 : " << endl;
+    cin >> num1;
+    cout << "enter number 2 : " << endl;
+    cin >> num2;
+    cout << "enter number 3 : " << endl;
+    cin >> num3;
+    return num1, num2, num3;
+}
+
+int SumNumbers(int num1, int num2, int num3)
+{
+    return num1 + num2 + num3;
+}
+
+void PrintResult(int num1, int num2, int num3)
+{
+    cout << " result is : " << SumNumbers(num1, num2, num3) << endl;
+}
+
+
+int main()
+{
+    int num1, num2, num3;
+    ReadNumbers(num1,num2,num3);
+    PrintResult(num1,num2,num3);

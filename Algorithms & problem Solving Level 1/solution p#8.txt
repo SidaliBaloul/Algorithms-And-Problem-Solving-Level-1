@@ -1,0 +1,32 @@
+enum enResult {pass = 1, fail = 2};
+
+int ReadMark()
+{
+    int mark;
+    cout << "enter ur mark : " << endl;
+    cin >> mark;
+    return mark;
+}
+enResult Check(int mark)
+{
+    enResult mymark;
+    mymark = (enResult)mark;
+
+    if (mymark >= 50)
+        return enResult::pass;
+    else
+        return enResult::fail;
+}
+void PrintResult(int mark)
+{
+    if (Check(mark) == enResult::pass)
+        cout << "pass" << endl;
+    else
+        cout << "fail\n";
+}
+
+
+int main()
+{
+    
+    PrintResult(ReadMark());

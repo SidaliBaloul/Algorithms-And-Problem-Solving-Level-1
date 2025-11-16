@@ -1,0 +1,44 @@
+enum enPrime { prime = 1, notprime = 2 };
+
+float ReadNumber(string msg)
+{
+    float num = 0;
+    do
+    {
+        cout << msg << endl;
+        cin >> num;
+    } while (num <= 0);
+
+    return num;
+}
+
+enPrime Check(int num)
+{
+    int m = round(num / 2);
+    for (int i = 2;i <= m;i++)
+    {
+        if (num % i == 0)
+        {
+            return enPrime::notprime;
+        }
+    }
+    return enPrime::prime;
+}
+
+void PrintResult(int num)
+{
+    switch (Check(num))
+    {
+    case enPrime::notprime:
+        cout << "number is not prime " << endl;
+        break;
+
+    case enPrime::prime:
+        cout << "number is prime " << endl;
+        break;
+    }
+}
+
+int main()
+{
+    PrintResult(ReadNumber("enter number : "));

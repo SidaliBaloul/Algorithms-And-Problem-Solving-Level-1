@@ -1,0 +1,30 @@
+struct Names
+{
+    string FirstName;
+    string LastName;
+};
+
+Names ReadFullName()
+{
+    Names name;
+    cout << "enter ur first name : " << endl;
+    cin >> name.FirstName;
+    cout << "enter ur last name : " << endl;
+    cin >> name.LastName;
+    return name;
+}
+string GetFullName(Names name)
+{
+    string FullName = name.FirstName + " " + name.LastName;
+    return FullName;
+}
+
+void PrintFullName(string FullName)
+{
+    cout << "ur fullname is : " << FullName << endl;
+}
+
+int main()
+{
+    
+    PrintFullName(GetFullName(ReadFullName()));

@@ -1,0 +1,23 @@
+int ReadNumber(string msg)
+{
+    int num;
+    do
+    {
+        cout << msg << endl;
+        cin >> num;
+    } while (num <= 0);
+
+    return num;
+}
+int Calculate(int loan, int months)
+{
+    return (float)loan / months;
+}
+
+
+int main()
+{
+    float LoanAmount = ReadNumber("enter the loan : ");
+    float Months = ReadNumber("enter the monthly pay : ");
+
+    cout << Calculate(LoanAmount, Months) << endl;

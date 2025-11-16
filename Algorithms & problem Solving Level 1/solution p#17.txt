@@ -1,0 +1,25 @@
+void ReadNumbers(float &a, float &b)
+{
+    cout << "enter a value : " << endl;
+    cin >> a;
+
+    cout << "enter b value : " << endl;
+    cin >> b;
+}
+
+float CalculateResult(float a, float b)
+{
+    float area = a / 2 * b;
+    return area;
+}
+
+void PrintResults(float result)
+{
+    cout << "result is : " << result << endl;
+}
+
+int main()
+{
+    float a, b;
+    ReadNumbers(a,b);
+    PrintResults(CalculateResult(a, b));

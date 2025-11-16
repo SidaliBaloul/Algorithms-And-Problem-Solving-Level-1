@@ -1,0 +1,47 @@
+enum enOp { plus = '+', min = '-', multip = '*', sur = '/' };
+
+int ReadNum1(string msg)
+{
+    int num;
+    cout << msg << endl;
+    cin >> num;
+
+    return num;
+}
+enOp ReadOp()
+{
+    char op;
+    cout << "enter op : " << endl;
+    cin >> op;
+
+    return (enOp)op;
+}
+
+
+ 
+
+float Calculate(float number1, float number2, char op)
+{
+    switch (op)
+    {
+    case enOp::plus:
+        return number1 + number2;
+    case enOp::min:
+        return number1 - number2;
+    case enOp::multip:
+        return number1 * number2;
+    case enOp::sur:
+        return number1 / number2;
+    default:
+        cout << "error";
+
+    }
+}
+
+
+int main()
+{
+    float number1 = ReadNum1("enter num1 value : ");
+    float number2 = ReadNum1("enter num2 value : ");
+    char op = ReadOp();
+    cout << "result is : " << Calculate(number1, number2, op);

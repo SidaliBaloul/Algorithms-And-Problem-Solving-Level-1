@@ -1,0 +1,33 @@
+string ReadNum()
+{
+    string num;
+    cout << "enter the code : " << endl;
+    cin >> num;
+
+    return num;
+}
+bool Check()
+{
+    string pincode;
+    do
+    {
+        pincode = ReadNum();
+        if (pincode == "1234")
+        {
+            return 1;
+        }
+        else
+        {
+            cout << "wrong pin" << endl;
+            system("color 4F");
+        }
+    } while (pincode != "1234");
+}
+
+
+int main()
+{
+    if (Check())
+    {
+        system("color 2F");
+        cout << "ur balance is : " << 7500 << endl;

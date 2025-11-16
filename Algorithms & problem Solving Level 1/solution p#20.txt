@@ -1,0 +1,23 @@
+float ReadNumber()
+{
+    float d;
+    cout << "enter r value : " << endl;
+    cin >> d;
+    return d;
+}
+
+float CalculateResult(float d)
+{
+    const float PI = 3.14;
+    float area = (PI * pow(d, 2)) / 4;
+    return area;
+}
+void PrintResult(float result)
+{
+    cout << "total is : " << result << endl;
+}
+
+int main()
+{
+    
+    PrintResult(CalculateResult(ReadNumber()));

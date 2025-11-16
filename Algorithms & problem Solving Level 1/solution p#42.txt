@@ -1,0 +1,43 @@
+struct stTime
+{
+    int days;
+    int hours;
+    int minutes;
+    int secondes;
+};
+
+int ReadPositive(string msg)
+{
+    int num;
+    do
+    {
+        cout << msg << endl;
+        cin >> num;
+    } while (num < 0);
+    return num;
+}
+stTime ReadTime()
+{
+    stTime mytime;
+    mytime.days = ReadPositive("enter number of days : ");
+    mytime.hours = ReadPositive("enter number of hours : ");
+    mytime.minutes = ReadPositive("enter number of minutes : ");
+    mytime.secondes = ReadPositive("enter number of secondes : ");
+
+    return mytime;
+}
+int Convert(stTime mytime)
+{
+    int totalsecondes = (mytime.minutes * 60) + (mytime.hours * 60 * 60) + (mytime.days * 60 * 60 * 24) + (mytime.secondes);
+    return totalsecondes;
+}
+
+void PrintTotalSecondes(int convert)
+{
+    cout << convert << " secondes " << endl;
+}
+
+
+int main()
+{
+    PrintTotalSecondes(Convert(ReadTime()));

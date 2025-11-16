@@ -1,0 +1,26 @@
+int ReadNumbers(string msg)
+{
+    int num;
+    do
+    {
+        cout << msg << endl;
+        cin >> num;
+    } while (num <= 0);
+
+    return num;
+}
+int CalculateRemainder(int tb, int cp)
+{
+    return cp - tb;
+}
+
+int main()
+{
+    int Totalbill = ReadNumbers("enter the bill : ");
+    int CashPaid = ReadNumbers("enter the cashpaid : ");
+
+    cout << "total bill is : " << Totalbill << endl;
+    cout << "cashpaid is : " << CashPaid << endl;
+    cout << "**********************************\n";
+
+    cout << "remainder is : " << CalculateRemainder(Totalbill, CashPaid);

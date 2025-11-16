@@ -1,0 +1,66 @@
+enum enCheck {odd = 1, even = 2};
+
+int ReadNumber()
+{
+    int num;
+    cout << "enter the number value : " << endl;
+    cin >> num;
+
+    return num;
+}
+
+enCheck Check(int num)
+{
+    if (num & 2 != 0)
+        return enCheck::odd;
+    else
+        return enCheck::even;
+}
+
+int CheckFor(int num)
+{
+    int sum = 0;
+    for (int i = 1; i <= num; i++)
+    {
+        if (Check(i) == enCheck::odd)
+            sum += i;
+    }
+    return sum;
+}
+
+int CheckWhile(int num)
+{
+    int sum = 0;
+    int i = 0;
+    while (i < num)
+    {
+        i++;
+        if (Check(i) == enCheck::odd)
+        {
+            sum += i;
+        }
+    }
+    return sum;
+}
+
+int CheckDo(int num)
+{
+    int sum = 0;
+    int i = 0;
+    do
+    {
+        i++;
+        if (Check(i) == enCheck::odd)
+            sum += i;
+
+    } while (i < num);
+    return sum;
+}
+
+int main()
+{
+    int n = ReadNumber();
+
+    cout << CheckFor(n) << endl;
+    cout << CheckWhile(n) << endl;
+    cout << CheckDo(n) << endl;

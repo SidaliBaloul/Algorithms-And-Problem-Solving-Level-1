@@ -1,0 +1,9 @@
+void PrintName(string name)
+{
+    cout << "my name is : " << name << endl;
+}
+
+
+int main()
+{
+    PrintName("sidali");

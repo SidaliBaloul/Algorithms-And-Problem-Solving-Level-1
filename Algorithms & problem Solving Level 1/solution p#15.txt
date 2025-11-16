@@ -1,0 +1,22 @@
+void ReadNumbers(int &num1, int &num2)
+{
+    cout << "enter the numbers : " << endl;
+    cin >> num1;
+    cin >> num2;
+}
+float RectangleArea(int num1, int num2)
+{
+    return num1 * num2;
+}
+void PrintResult(float result)
+{
+    cout << "the result is : " << result << endl;
+
+}
+
+
+int main()
+{
+    int num1, num2;
+    ReadNumbers(num1, num2);
+    PrintResult(RectangleArea(num1, num2));

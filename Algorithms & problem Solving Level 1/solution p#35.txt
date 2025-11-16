@@ -1,0 +1,47 @@
+struct stPig
+{
+    int pennies;
+    int nickels;
+    int dimes;
+    int quarters;
+    int dollars;
+};
+stPig ReadNums()
+{
+    stPig pig;
+
+    cout << "enter pennies : " << endl;
+    cin >> pig.pennies;
+    cout << "enter nickels : " << endl;
+    cin >> pig.nickels;
+    cout << "enter dimes : " << endl;
+    cin >> pig.dimes;
+    cout << "enter quarters : " << endl;
+    cin >> pig.quarters;
+    cout << "enter dollars : " << endl;
+    cin >> pig.dollars;
+
+    return pig;
+}
+
+int Calculatepen(stPig pen)
+{
+    int totalpennies = (pen.nickels * 5) + (pen.dimes * 10) + (pen.quarters * 25) + (pen.dollars * 100) + pen.pennies;
+    return totalpennies;
+}
+
+float Calculatedol(stPig pen)
+{
+    float totaldollars = (float)Calculatepen(pen) / 100;
+    return totaldollars;
+
+}
+void PrintResults(stPig pen)
+{
+    cout << "total pennies is : " << Calculatepen(pen) << endl;
+    cout << "total pennies is : " << Calculatedol(pen) << endl;
+}
+
+int main()
+{
+    PrintResults(ReadNums());

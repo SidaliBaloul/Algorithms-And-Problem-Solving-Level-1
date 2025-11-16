@@ -1,0 +1,27 @@
+float ReadHours(string msg)
+{
+    int hours;
+    cout << msg << endl;
+    cin >> hours;
+
+    return hours;
+}
+
+float HourstoDays(float hours)
+{
+    return hours / 24;
+}
+
+float HourstoWeeks(float hours)
+{
+    return hours / 24 / 7;
+}
+
+int main()
+{
+    float hours = ReadHours("enter the number of hours : ");
+    float numofdays = HourstoDays(hours);
+    float numofweeks = HourstoWeeks(hours);
+
+    cout << numofweeks << " weeks " << endl;
+    cout << numofdays << " days " << endl;

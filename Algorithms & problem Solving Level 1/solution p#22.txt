@@ -1,0 +1,24 @@
+void ReadNumbers(float &a, float &b)
+{
+    cout << "enter a value : " << endl;
+    cin >> a;
+
+    cout << "enter b value : " << endl;
+    cin >> b;
+}
+float CalculateArea(float a, float b)
+{
+    const float PI = 3.14;
+    float area = PI * (pow(b, 2) / 4) * ((2 * a - b) / (2 * a + b));
+    return area;
+}
+void PrintResult(float result)
+{
+    cout << "result is : " << result << endl;
+}
+
+int main()
+{
+    float a, b;
+    ReadNumbers(a,b);
+    PrintResult(CalculateArea(a, b));

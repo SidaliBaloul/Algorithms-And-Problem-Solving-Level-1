@@ -1,0 +1,38 @@
+enum enNumber {odd=1, even=2};
+
+int ReadNumber()
+{
+    int num;
+    cout << "enter a number : " << endl;
+    cin >> num;
+    return num;
+}
+
+enNumber Check(int num)
+{
+    int result = num % 2;
+    if (result == 0 )
+    {
+        return enNumber::even;
+    }
+    else
+    {
+        return enNumber::odd;
+    }
+}
+
+void PrintTheResults(enNumber numType)
+{
+    if (numType == enNumber::even)
+    {
+        cout << "the number is even " << endl;
+    }
+    else
+    {
+        cout << "the number is odd " << endl;
+    }
+}
+
+int main()
+{
+    PrintTheResults(Check(ReadNumber()));

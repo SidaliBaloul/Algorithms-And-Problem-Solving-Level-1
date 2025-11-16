@@ -1,0 +1,25 @@
+int ReadNumber(string message)
+{
+    int num;
+    do
+    {
+        cout << message << endl;
+        cin >> num;
+    } while (num < 0);
+
+    return num;
+}
+
+int Factorial(int num)
+{
+    int f = 1;
+    for (int i = num; i >= 1;i-- )
+    {
+        f *= i;
+    }
+    return f;
+}
+
+int main()
+{
+    cout << Factorial(ReadNumber("enter a positiv number : ")) << endl;

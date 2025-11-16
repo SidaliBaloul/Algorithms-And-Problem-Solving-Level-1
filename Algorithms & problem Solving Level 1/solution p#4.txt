@@ -1,0 +1,36 @@
+struct stRequirments
+{
+    int age;
+    bool HasDriverl;
+};
+
+stRequirments ReadInfos()
+{
+    stRequirments infos;
+    cout << "enter ur age : " << endl;
+    cin >> infos.age;
+    cout << "enter dl : " << endl;
+    cin >> infos.HasDriverl;
+    return infos;
+}
+
+bool Isaccepted(stRequirments infos)
+{
+    return (infos.age > 21 && infos.HasDriverl == 1);
+}
+
+void PrintResults(stRequirments infos)
+{
+    if (Isaccepted(infos))
+    {
+        cout << "hired" << endl;
+    }
+    else
+    {
+        cout << "rejected" << endl;
+    }
+}
+
+int main()
+{
+    PrintResults(ReadInfos());

@@ -1,0 +1,48 @@
+enum enpassfail {pass =1, fail=2};
+
+int ReadNumbers(int &num1, int &num2, int &num3)
+{
+    cout << "enter number 1 : " << endl;
+    cin >> num1;
+    cout << "enter number 2 : " << endl;
+    cin >> num2;
+    cout << "enter number 3 : " << endl;
+    cin >> num3;
+    return num1, num2, num3;
+}
+
+int SumNumbers(int num1, int num2, int num3)
+{
+    return num1 + num2 + num3;
+}
+float AvgNumbers(int num1, int num2, int num3)
+{
+    return (float)SumNumbers(num1, num2, num3) / 3;
+}
+
+enpassfail Check(float avg)
+{
+    enpassfail mymark;
+    if (avg >= 50)
+        return enpassfail::pass;
+    else
+        enpassfail::fail;
+
+}
+
+void PrintResult(int average)
+{
+    cout << " result is : " << average << endl;
+    if (Check(average) == enpassfail::pass)
+        cout << "PASS !" << endl;
+    else
+        cout << "FAIL ! " << endl;
+
+}
+
+
+int main()
+{
+    int num1, num2, num3;
+    ReadNumbers(num1, num2, num3);
+    PrintResult(AvgNumbers(num1, num2, num3));
